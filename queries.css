@@ -1,0 +1,106 @@
+/* Mobile S - 320px */
+@media (min-width: 320px) {
+  .btn--delete {
+    font-size: 1.2rem;
+    color: var(--gray-5);
+  }
+  .task.completed .btn--delete {
+    color: rgb(250, 250, 250);
+  }
+  .task.completed:hover button {
+    color: rgb(250, 250, 250);
+  }
+  .task.completed:active button {
+    color: rgb(250, 250, 250);
+  }
+  .task.completed:focus-within button {
+    color: rgb(250, 250, 250);
+  }
+}
+
+/* Mobile M - 375px */
+@media (min-width: 375px) {
+}
+
+/* Mobile L - 425px */
+@media (min-width: 425px) {
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) {
+}
+
+/* Laptop - 1024 */
+@media (min-width: 1024px) {
+  .input-container:hover,
+  .input-container:active {
+    box-shadow: 0 0 0 0.15rem rgb(27, 118, 227);
+  }
+
+  .input-container:focus,
+  .input-container:focus-within {
+    box-shadow: 0 0 0 0.15rem rgb(27, 118, 227);
+  }
+
+  .btn--add:focus {
+    box-shadow: 0 0 0 0.15rem var(--lime-7);
+  }
+
+  .task:focus-within {
+    box-shadow: 0 0 0 0.15rem rgb(27, 118, 227);
+  }
+
+  /*  */
+  .task:focus-within .btn--delete,
+  .task:hover .btn--delete {
+    color: var(--gray-5);
+  }
+
+  /* .task:focus-within .btn--edit {
+    color: var(--gray-5);
+  }
+  .task:hover .btn--edit {
+    color: var(--gray-5);
+  } */
+
+  .checkbox:focus {
+    /* outline: 0.15rem solid var(--blue-8); */
+    outline: 0.15rem solid rgb(27, 118, 227);
+    outline-offset: 0.15rem;
+    border-radius: var(--radius-2);
+  }
+
+  .completed .checkbox:focus {
+    outline: 0.15rem solid var(--gray-1);
+    outline-offset: 0.15rem;
+    border-radius: var(--radius-2);
+  }
+  .btn--delete {
+    font-size: 1.3rem;
+    color: transparent;
+    transition: color 0.3s ease-in;
+  }
+  .task.completed .btn--delete:focus {
+    outline: 0.15rem solid var(--gray-1);
+    border-radius: var(--radius-2);
+  }
+  .task.completed .btn--delete {
+    color: transparent;
+    transition: color 0.3s ease-in;
+  }
+
+  .btn--delete:focus {
+    outline: 0.15rem solid rgb(27, 118, 227);
+    /* outline-offset: 0.15rem; */
+    border-radius: var(--radius-2);
+  }
+}
+
+/* Laptop L - 1440px */
+@media (min-width: 1449px) {
+}
+
+/* 4k styles - 2560px*/
+@media (min-width: 2500px) {
+  /* CSS styles for 4k desktop screens */
+}

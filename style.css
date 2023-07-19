@@ -1,0 +1,334 @@
+@import "./node_modules/open-props/open-props.min.css";
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* *************************** */
+/* #9796f0,#fbc7d4*/
+
+html {
+  min-height: 100%;
+  width: 100%;
+  background-color: #d9d9fc;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+
+  /* background-image: var(--gradient-26); */
+  font-family: var(--font-sans);
+  color: var(--gray-7);
+  /* background-image: linear-gradient(to bottom right, #c8c8fd, #f8d7df); */
+  background-size: cover;
+}
+
+.container {
+  padding-top: var(--size-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--size-10);
+  height: var(--size-10);
+  margin-top: var(--size-6);
+  margin-bottom: var(--size-4);
+  background-color: rgb(250, 250, 250);
+  border-radius: var(--radius-3);
+
+  font-size: 4rem;
+  color: var(--violet-10);
+  box-shadow: var(--shadow-3);
+}
+
+/* DAY */
+.day {
+  font-size: var(--font-size-4);
+  color: var(--violet-12);
+}
+
+/* MAIN CONTAINER */
+.task-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: min(100% - 2rem, var(--size-15));
+  gap: var(--size-3);
+  margin-inline: auto;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: var(--radius-2);
+  background-color: rgb(250, 250, 250);
+  height: var(--size-9);
+  padding: var(--size-1);
+
+  box-shadow: 0 0 0 0.15rem transparent;
+  transition: box-shadow 0.3s;
+}
+
+.input {
+  width: min(100% - 2.5rem); /*???*/
+
+  height: 100%;
+  padding: 0 var(--size-2);
+  border: none;
+
+  background-color: transparent;
+}
+input::placeholder {
+  color: hsla(210, 10%, 23%, 0.8);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+}
+
+.btn--add {
+  font-size: var(--size-5);
+  color: var(--gray-8);
+  border-radius: var(--radius-2);
+
+  background-color: transparent;
+  box-shadow: 0 0 0 0.15rem transparent;
+  transition: all 0.3s;
+}
+
+.btn--add:link,
+.btn--add:visited {
+  background-color: var(--lime-7);
+  border-radius: var(--radius-2);
+}
+.btn--add:hover,
+.btn--add:active {
+  cursor: pointer;
+  background-color: var(--lime-7);
+  border-radius: var(--radius-2);
+  color: rgb(250, 250, 260);
+}
+
+.taskList {
+  display: flex;
+
+  width: 100%;
+  flex-direction: column;
+  list-style: none;
+  gap: var(--size-2);
+}
+.taskList:last-child {
+  margin-bottom: var(--size-3);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: var(--size-9);
+  background-color: rgb(250, 250, 250);
+  padding: var(--size-1);
+  border-radius: var(--radius-2);
+
+  word-break: break-word;
+  text-align: -webkit-match-parent;
+  flex-grow: 1;
+
+  box-shadow: 0 0 0 0.15rem transparent;
+  transition: box-shadow 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: max(100% - 2rem);
+
+  margin: var(--size-2) 0 var(--size-2) var(--size-2);
+}
+
+.text {
+  padding-left: var(--size-2);
+  /* margin-right: 2rem; */
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* font-size: var(--font-size-2); */
+}
+
+.btn--delete {
+  cursor: pointer;
+  margin-bottom: var(--size-3);
+
+  transition: outline-color 0.3s;
+}
+
+/* ////
+.btn--edit {
+  cursor: pointer;
+  
+  color: transparent;
+  transition: color 0.3s ease-in;
+}
+
+.btn--edit:link,
+.btn--edit:visited {
+  box-shadow: 0 0 0 var(--size-1) red;
+}
+.btn--edit:hover,
+.btn--edit:active {
+  cursor: pointer;
+  box-shadow: 0 0 0 var(--size-1) red;
+}
+.btn--edit:focus {
+  box-shadow: 0 0 0 var(--size-1) red;
+} */
+
+/* Error */
+/* .error {
+} */
+
+.deleted {
+  opacity: 0;
+  transition: opacity 0.5s;
+  animation-duration: 0.5s;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  background-color: var(--violet-4);
+  color: rgb(250, 250, 250);
+}
+
+/* style="position: relative; left: 0px; top: 0px; */
+
+// White delete button on dark color
+
+/////////////////
+// Checkbox
+.clear {
+  clear: both;
+}
+
+input[type="checkbox"] {
+  display: flex;
+
+  justify-content: center;
+  min-width: 1.35rem;
+  min-height: 1.35rem;
+  border: 2px solid var(--gray-6);
+  border-radius: var(--radius-2);
+  appearance: none;
+  cursor: pointer;
+
+  outline-color: transparent;
+  transition: outline-color 0.3s;
+
+  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+  &::before {
+    content: "";
+    bottom: 1rem;
+    width: 0.55rem;
+    height: 0.9rem;
+    border-style: solid;
+    border-color: rgb(250, 250, 250);
+    border-width: 0 3px 3px 0;
+
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+  &:checked {
+    color: rgb(250, 250, 250);
+    border-color: var(--lime-7);
+    background: var(--lime-7);
+    &::before {
+      opacity: 1;
+    }
+  }
+}

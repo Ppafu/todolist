@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#d9d9fc" />
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>To-Do List 📝</title>
+    <script type="module" src="script.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <!-- <link rel="stylesheet" href="queries.css" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+      </div>
+
+      <!-- Main container -->
+      <div class="task-container">
+        <div class="day">Today is the day!</div>
+        <!-- Input field -->
+        <div class="input-container">
+          <input
+            type="text"
+            class="input"
+            placeholder="✍ Add something"
+            maxlength="500" />
+          <div class="btn-container">
+            <button class="btn btn--add">
+              <ion-icon name="add-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <!-- Tasks -->
+        <ul class="taskList">
+          <!--*************-->
+          <!-- <li class="task" data-id="${this.id}">
+            <div class="wrapper">
+              <input type="checkbox" class="checkbox" id="${this.id}" />
+              <label for="${this.id}" class="text">${this.title}</label>
+             </div>
+            <div class="btn-container">
+              <div>
+                <button class="btn btn--delete" data-id="${this.id}">
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+              </div>
+            <div>
+              <button class="btn btn--edit" data-id="${this.id}">
+                  <ion-icon name="create-outline"></ion-icon>
+              </button>
+            </div>
+            </div>
+          </li> -->
+          <!--*************-->
+        </ul>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
